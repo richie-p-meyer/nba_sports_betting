@@ -2,6 +2,12 @@
 ###Introduction
 This is a Python code to scrape sports betting data from the website basketball-reference.com. It uses the BeautifulSoup library to extract information from the site, and the Playwright library to fetch the HTML. The code creates a folder structure to store the data it collects.
 
+I used the following work as a base for this project: https://github.com/dataquestio/project-walkthroughs/tree/master/nba_games
+To this base I added the following functionality:
+    1. Add and predict future games
+    2. Add past sportsbook odds
+    3. Make predictions on the over/under bet and spread bet for future games
+
 ###Requirements
 To run this code, you will need to install the following packages:
 
