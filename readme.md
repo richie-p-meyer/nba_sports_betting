@@ -1,30 +1,35 @@
-#Sports Betting Readme
-###Introduction
-This is a Python code to scrape sports betting data from the website basketball-reference.com. It uses the BeautifulSoup library to extract information from the site, and the Playwright library to fetch the HTML. The code creates a folder structure to store the data it collects.
+#NBA Sport Betting
 
-I used the following work as a base for this project: https://github.com/dataquestio/project-walkthroughs/tree/master/nba_games
-To this base I added the following functionality:
-    1. Add and predict future games
-    2. Add past sportsbook odds
-    3. Make predictions on the over/under bet and spread bet for future games
+##Work in Progress:
+Modeling predicts the winner of any given NBA game at 63% accuracy. I am working on building models to predict the OverUnder and Spread for given odds.
 
-###Requirements
-To run this code, you will need to install the following packages:
+##Goals:
+
+The main goal of this project is to predict the outcomes of NBA games and determine how to bet on the moneyline, spread, and over/under. To achieve this goal, we will develop a machine learning model that analyzes various factors such as team performance, player stats, home/away records, and other relevant data.
+
+Our model will be trained on historical NBA game data to identify patterns and relationships that can help predict the outcome of future games. Once the model is trained, we will test its accuracy on a validation set of data and make any necessary adjustments to improve its performance.
+
+After validating our model, we will use it to predict the outcomes of upcoming NBA games and provide recommendations on how to bet on the moneyline, spread, and over/under. These recommendations will be based on our model's predicted probabilities of each possible outcome, along with a consideration of the odds offered by bookmakers.
+
+Overall, our goal is to build a reliable and accurate machine learning model that can help bettors make informed decisions and improve their chances of winning bets on NBA games.
+
+##Installation
+In order to run the script, the following Python libraries need to be installed:
 
 pandas
 numpy
-playwright
 BeautifulSoup
+playwright
+datetime
+os
+pickle
 
-###Folder Structure
-The code creates the following folder structure to store the data:
+In addition to the Python libraries, Playwright browsers need to be installed by running playwright install on the command line or !playwright install from Jupyter.
 
-data: The root directory where the other folders are stored.
-standings: This folder stores the standings pages for each season.
-scores: This folder stores the box scores for each game.
-temp: This folder stores the temporary box scores while they are being processed.
-Code Overview
-The code defines a range of seasons to scrape, from 2016 to 2023. If the data directory does not exist, the code creates the required folder structure. The code then uses the Playwright library to fetch the HTML for each season's standings and box scores. The information is then stored in the relevant folder. The code also includes a method to parse the HTML for the box scores, which extracts information such as the teams playing, the scores, and the date of the game.
+#Usage
+The script creates three directories: data/standings, data/scores, and data/temp. The data/standings directory contains HTML files with team standings data, the data/scores directory contains box score data for individual games, and the data/temp directory is used for temporary files.
 
-###Conclusion
-This code provides a simple way to scrape sports betting data from the website basketball-reference.com. By using the BeautifulSoup and Playwright libraries, the code can easily extract the required information and store it in a structured way. With this code, you will have the data you need to analyze the performance of various teams and make informed decisions when placing bets on sports games.
+Run script.py to webscrape recent games and make predictions on future games
+
+#Conclusion
+This project is still a work in progress. There are still bugs that exist, and I am currently working on adding features. That said, the model predicts future NBA games with an accuracy of 63% which is much better than simply predicting that the home team will win.
