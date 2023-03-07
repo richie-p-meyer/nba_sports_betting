@@ -19,13 +19,13 @@ Overall, our goal is to build a reliable and accurate machine learning model tha
 ## Installation
 In order to run the script, the following Python libraries need to be installed:
 
-pandas
-numpy
-BeautifulSoup
-playwright
-datetime
-os
-pickle
+-pandas  
+-numpy  
+-BeautifulSoup  
+-playwright  
+-datetime  
+-os  
+-pickle  
 
 In addition to the Python libraries, Playwright browsers need to be installed by running playwright install on the command line or !playwright install from Jupyter.
 
